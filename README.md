@@ -215,7 +215,7 @@ The packages above allows us to send the application logs to elasticsearch throu
     <contextName>your-application-name</contextName>
 
     <appender name="STASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-		<destination>url.to.logstash.tv2.dk:5000</destination>
+		<destination>url.to.logstash.com:5000</destination>
 		<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
 			<providers>
 				<mdc /> <!-- MDC variables on the Thread will be written as JSON fields -->
