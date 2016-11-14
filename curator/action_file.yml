@@ -1,0 +1,18 @@
+---
+actions:
+  1:
+    action: delete_indices
+    description: >-
+      Alias indices older than 14 days, with a prefix of play-backend.
+    options:
+      continue_if_exception: False
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: play-backend
+    - filtertype: age
+      source: creation_date
+      direction: older
+      unit: days
+      unit_count: 14
